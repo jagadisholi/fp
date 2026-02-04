@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Computer Course</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous">
+
+  <style>
+    body {
+      background-color: #f9f9f9;
+      color: #6c757d;
+    }
+    .community-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .community-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header file  -->
+   <div id="header"></div>
+
+<script>
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
+});
+</script>
+
+  <div class="container my-5">
+    <h1 class="text-center fw-bold text-warning mb-5">Computer courses</h1>
+
+    <div class="row">
+
+      <!-- Basic Course -->
+      <div class="col-md-4 mb-4">
+        <div class="card community-card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">Basic Course</h5>
+            <p class="card-text">
+              Learn computer fundamentals including MS Word, Excel, PowerPoint,
+              internet usage, email, and basic operating system skills.
+            </p>
+            <a href="https://wa.me/9779810247132" 
+            target="_blank" 
+            class="btn btn-success mt-auto">
+            Enroll Now
+          </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diploma & Designing Package -->
+      <div class="col-md-4 mb-4">
+        <div class="card community-card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">Diploma & Designing Package</h5>
+            <p class="card-text">
+              Professional training in graphic design, Photoshop, Illustrator,
+              InDesign, video editing, and creative design tools.
+            </p>
+            <a href="https://wa.me/9779810247132" 
+            target="_blank" 
+            class="btn btn-success mt-auto">
+            Enroll Now
+          </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Accounting Package -->
+      <div class="col-md-4 mb-4">
+        <div class="card community-card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">Accounting Package</h5>
+            <p class="card-text">
+              Learn Tally, accounting principles, billing systems, taxation basics,
+              and financial record management for businesses.
+            </p>
+              <a href="https://wa.me/9779810247132" 
+            target="_blank" 
+            class="btn btn-success mt-auto">
+            Enroll Now
+          </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Engineering AutoCAD -->
+      <div class="col-md-4 mb-4">
+        <div class="card community-card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">Engineering AutoCAD</h5>
+            <p class="card-text">
+              Master AutoCAD for civil, electrical, and mechanical drawings,
+              layouts, plans, and professional engineering designs.
+            </p>
+              <a href="https://wa.me/9779810247132" 
+            target="_blank" 
+            class="btn btn-success mt-auto">
+            Enroll Now
+          </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Computer Hardware & Repairing -->
+      <div class="col-md-4 mb-4">
+        <div class="card community-card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary">Computer Hardware & Repairing Classes</h5>
+            <p class="card-text">
+              Hands-on training in computer assembly, troubleshooting,
+              maintenance, upgrading, and basic networking repair skills.
+            </p>
+            <a href="https://wa.me/9779810247132" 
+            target="_blank" 
+            class="btn btn-success mt-auto">
+            Enroll Now
+          </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+    <!-- redirect to whatsapp -->
+  <script>
+function openWhatsApp() {
+  if (confirm("Chat with us on WhatsApp?")) {
+    window.open("https://wa.me/9779810247132", "_blank");
+  }
+}
+</script> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+     <!-- google translate -->
+  <!-- Hidden Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+<script src="language.js"></script> 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="assets/scroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services Page</title>
+
+  <link rel="stylesheet" href="./assets/css/app.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body{
+      color: #6c757d;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Language Buttons -->
+<div style="text-align:right; padding:10px;">
+  <button onclick="changeLang('en')" class="btn btn-outline-success btn-sm">English</button>
+  <button onclick="changeLang('ja')" class="btn btn-outline-success btn-sm">日本語</button>
+  <button onclick="changeLang('ne')" class="btn btn-outline-success btn-sm">नेपाली</button>
+</div>
+
+<!-- ONE Google Translate Element (ONLY ONE!) -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<div id="google_translate_element" style="display:none;"></div>
+<!-- Hidden Google Translate -->
+<section class="features container my-5">
+  <h2 class="text-success mb-4 text-center text-warning fw-bold">Our Services</h2>
+
+  <div class="row">
+    <div class="col-md-3 mb-3">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <div class="display-6">📚</div>
+          <h5 class="card-title mt-3 text-primary">Japanese Language</h5>
+          <p class="card-text">
+            Click here to explore more and you will get a list of Japanese language
+            courses and related items.
+          </p>
+          <a href="japanese_lang.html" class="btn btn-success mt-auto">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3 order-md-1">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <div class="display-6">🌐</div>
+          <h5 class="card-title mt-3 fw-bold text-primary">Computer Course</h5>
+          <p class="card-text">
+            Join a supportive network of learners, developers, and mentors from all
+            around the world.
+          </p>
+          <a href="computer_courses.html" class="btn btn-success mt-auto">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+    <div class="card text-center h-100">
+        <div class="card-body">
+        <div class="display-6">🏆</div>
+        <h5 class="card-title mt-3 text-primary fw-bold">Skill Classes</h5>
+        <p class="card-text">
+            Boost your resume with certificates that are respected by companies and
+            institutions globally.
+        </p>
+        <a href="skill_classes.html" class="btn btn-success mt-auto">
+            Explore
+        </a>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <div class="display-6">✈️</div>
+          <h5 class="card-title mt-3 fw-bold text-primary">Visa</h5>
+          <p class="card-text">
+            Let’s get connected to expert mentors so they can guide you through the
+            learning track.
+          </p>
+          <a href="visa.html" class="btn btn-success mt-auto">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <div class="display-6">🖥️</div>
+          <h5 class="card-title mt-3 fw-bold text-primary">Ctevt</h5>
+          <p class="card-text">
+            Let’s get connected to expert mentors so they can guide you through the
+            learning track.
+          </p>
+          <a href="ctevt.html" class="btn btn-success mt-auto">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+
+       <div class="col-md-3 mb-3">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <div class="display-6">🛜</div>
+          <h5 class="card-title mt-3 fw-bold text-primary">Online Form Serviece</h5>
+          <p class="card-text">
+            Let’s get connected to expert mentors so they can guide you through the
+            learning track.
+          </p>
+          <a href="online_form.html" class="btn btn-success mt-auto">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+ <!-- google translate -->
+  <!-- Hidden Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+<script src="language.js"></script> 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

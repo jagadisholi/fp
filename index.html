@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LandingPage</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+      body{
+        color: #6c757d;
+      }
+      .navbar{
+        text-decoration: none;
+        color: green;
+      }
+      .navabr-brand{
+        display: flex;
+        align-items: center;
+      }
+      .custom-navbar{
+        background: linear-gradient(135deg, #f57242, #ff9f1c);
+
+      }
+       li{
+        color: white;
+      }
+      
+/* our team member */
+.team-member {
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    color: #0d6efd;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #0d6efd;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #f8f9fa;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #0d6efd;
+    margin: 20px auto;
+}
+/* footer */
+.footer-orange {
+  background: linear-gradient(135deg, #f57242, #ff9f1c);
+}
+
+.footer-orange h5 {
+  color: #ffffff;
+}
+
+.footer-orange p,
+.footer-orange li {
+  color: #fff3e0;
+}
+
+.footer-orange ul li {
+  margin-bottom: 6px;
+}
+
+.footer-orange hr {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.map-box iframe {
+  border-radius: 14px;
+}
+/* services section */
+.services_box{
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.services_box:hover{
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+</style>
+</head>
+<body>
+  <!-- header file -->
+   <div id="header"></div>
+
+<script>
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
+});
+</script>
+
+    <!-- navbar -->
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar d-flex">
+  <div class="container-fluid text-white">
+    <a class="nav-brand me-4" href="homepage.html">
+      <img src="images/logo.jpg" alt="logo of Bright Future" height="60px" width="60px">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto gap-3 fw-bold align-items-center">
+        <li class="nav-item"><a class="nav-link text-white" aria-current="page" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about_us.html" target="">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#services" target="_blank">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+        <li class="nav-item d-flex align-items-center ms-3">
+          <select id="languageSelector" class="form-select form-select-sm bg-light text-dark" onchange="setLanguage(this.value)">
+            <option value="en" selected>English</option>
+            <option value="ja">Japanese</option>
+            <option value="ne">Nepali</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,ne,ja',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  // Wait until Google Translate dropdown exists
+  function changeLanguage(lang) {
+    const interval = setInterval(() => {
+      const select = document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event('change'));
+        clearInterval(interval);
+      }
+    }, 100);
+  }
+
+  document.getElementById('languageSelector').addEventListener('change', function () {
+    changeLanguage(this.value);
+  });</script>
+
+<!-- carosal here -->
+<div class="container my-3" id="google_translate_element">
+  <div id="carouselExampleControls" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 600px;">
+    <div class="carousel-inner rounded-4 shadow-sm">
+      <div class="carousel-item active">
+        <img src="images/slide 1.heic" class="d-block w-100" alt="First slide" style="object-fit: cover; height: 400px;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/slide 2.heic" class="d-block w-100" alt="Second slide" style="object-fit: cover; height: 400px;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/slide 3.heic" class="d-block w-100" alt="Third slide" style="object-fit: cover; height: 400px;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/slide4.jpg" class="d-block w-100" alt="Second slide" style="object-fit: cover; height: 400px;">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+<!-- our services -->
+<section class="features container my-5" id="services">
+  <h2 class="text-warning mb-4 text-center fw-bold">Our Services</h2>
+
+  <div class="row">
+
+    <div class="col-md-4 mb-3">
+      <div class="card text-center services_box h-100">
+        <div class="card-body">
+          <div class="display-6">📚</div>
+          <h5 class="card-title mt-3 "><strong class="text-primary">Japanese Language</strong></h5>
+          <p class="card-text" style="color: #6c757d;">
+            Click here to explore more and you will get a list of Japanese language
+            courses and related items.
+          </p>
+          <a href="japanese_lang.html" class="btn btn-success mt-auto">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3 order-md-1">
+      <div class="card text-center services_box h-100">
+        <div class="card-body">
+          <div class="display-6">🌐</div>
+          <h5 class="card-title mt-3"><strong class="text-primary">Computer Course</strong></h5>
+          <p class="card-text" style="color: #6c757d;">
+            Join a supportive network of learners, developers, and mentors from all
+            around the world.
+          </p>
+          <a href="computer_courses.html" class="btn btn-success mt-auto">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+    <div class="card text-center services_box h-100">
+        <div class="card-body">
+        <div class="display-6">🏆</div>
+        <h5 class="card-title mt-3 "><strong class="text-primary">Skill Classes</strong></h5>
+        <p class="card-text" style="color: #6c757d;">
+            Boost your resume with certificates that are respected by companies and
+            institutions globally.
+        </p>
+        <a href="skill_classes.html" class="btn btn-success mt-auto">
+            Explore
+        </a>
+        </div>
+    </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="card text-center services_box h-100">
+        <div class="card-body">
+          <div class="display-6">✈️</div>
+          <h5 class="card-title mt-3 "><strong class="text-primary">Visa</strong></h5>
+          <p class="card-text" style="color: #6c757d;">
+            Let’s get connected to expert mentors so they can guide you through the
+            learning track.
+          </p>
+          <a href="visa.html" class="btn btn-success mt-auto">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <div class="card text-center services_box h-100">
+        <div class="card-body">
+          <div class="display-6">🖥️</div>
+          <h5 class="card-title mt-3 "><strong class="text-primary">Ctevt</strong></h5>
+          <p class="card-text" style="color: #6c757d;">
+            Let’s get connected to expert mentors so they can guide you through the
+            learning track.
+          </p>
+          <a href="ctevt.html" class="btn btn-success mt-auto">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+
+       <div class="col-md-4 mb-3">
+      <div class="card text-center services_box h-100">
+        <div class="card-body">
+          <div class="display-6">🛜</div>
+          <h5 class="card-title mt-3 "><strong class="text-primary">Online Form Serviece</strong></h5>
+          <p class="card-text" style="color: #6c757d;">
+            Let’s get connected to expert mentors so they can guide you through the
+            learning track.
+          </p>
+          <a href="online_form.html" class="btn btn-success mt-auto">
+            Explore
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- content here -->
+<div class="container my-5">
+  <div class="row align-items-center" style="background: #f0f8ff; border-radius: 20px; padding: 30px;">
+    
+    <!-- Left Column: Text (65%) -->
+    <div class="col-lg-8 mb-4 mb-lg-0 text-center text-lg-start">
+      <h2 class="fw-bold text-warning">Message From CEO:</h2>
+      <p style="color: #6c757d;">
+        Since its inception, Bright Future Prabidhik Shikshalaya Pvt. Ltd. We provide relevant tertiary courses and enhance our experientail learning. By engaging students in hands-on experiences and reflections, they learn in the classroom. As we strive for holistic education, we know that it doesn't just end at academic learning. We are giving technical education to our students. Bright Future Technical School has been established to achieve this goal through eduction.
+      </p>
+      <a href="about_us.html" class="btn btn-success rounded-pill px-4">Learn More</a>
+    </div>
+
+    <!-- Right Column: Image (35%) -->
+    <div class="col-lg-4 text-center">
+  <div class="img-wrapper rounded-4 shadow-sm overflow-hidden" style="max-height: 350px; width: 100%;">
+    <img src="images/CEO.jpg" alt="CEO Image" class="img-fluid" style="width: 100%; height: auto;">
+  </div>
+</div>
+
+
+    <!-- left column -->
+     <div class="col-lg-4 text-center my-5">
+  <div class="img-wrapper rounded-4 shadow-sm overflow-hidden" style="max-height: 350px; width: 100%;">
+    <img src="images/student.jpg" alt="Cute Image" class="img-fluid" style="width: 100%; height: auto;">
+  </div>
+</div>
+    <!-- right column -->
+    <div class="col-lg-8 mb-4 mb-lg-0 text-center text-lg-start">
+      <h2 class="fw-bold text-warning">Why choose BFS?</h2>
+      <p style="color: #6c757d;">
+        We provide a variety of practical skill development training, study abroad opportunities and a full range of online form services for students of all age groups. Learners until they reach their full potentail in the right place for them and improve their skills. We follow up every student after admission and throughout their studies.
+        <ul class="text-black" style="color: #6c757d;">
+          <li style="color: #6c757d;">As proper counseling will be provided for personality development guidance.</li>
+          <li style="color: #6c757d;">Since classes will be conducted on the concept of one student and one instructor.</li>
+          <li style="color: #6c757d;">Having well equipped computer lab, classrooms, books and other daily essential equipment facilities.</li>
+          <li style="color: #6c757d;">Because of the transportation facility.</li>
+          <li style="color: #6c757d;">Since job oriented classes will be conducted.</li>
+        </ul>
+      </p>
+      <a href="about_us.html" class="btn btn-success rounded-pill px-4">Learn More</a>
+    </div>
+  </div>
+</div>
+
+<!-- Our Team Section -->
+<section class="py-5">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="row text-center mb-5">
+            <div class="col-12 style="color: #6c757d;"">
+                <h2 class="section-title"> <a href="our_team.html" style="text-decoration: none;" class="fw-bold text-warning">Meet Our Team</a></h2>
+                <p class="text-muted">Dedicated professionals working together to achieve excellence</p>
+            </div>
+        </div>
+
+        <!-- Team Members -->
+        <div class="row g-4">
+            <!-- Team Member 1 -->
+             <!-- Team Member 1 -->
+            <div class="col-lg-4 col-md-6" style="color: #6c757d;">
+                <div class="team-member text-center p-4">
+                    <img src="images/bfpslogo.jpg" alt="Team Member 4" class="mb-4 shadow">
+                    <h5 class="mb-1">Er. Paras Bhandari</h5>
+                    <p class="text-muted mb-3">Samrakshak</p>
+                    <p class="small mb-3">She manages financial records, handles accounts, and ensures accurate financial reporting.</p>
+                    <div class="social-links">
+                         <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+              <!-- team member 2 -->
+            <div class="col-lg-4 col-md-6" style="color: #6c757d;">
+                <div class="team-member text-center p-4">
+                    <img src="images/CEO.jpg" alt="Team Member 1" class="mb-4 shadow">
+                    <h5 class="mb-1">Mr. Lokmani Bhandari</h5>
+                    <p class="text-muted mb-3">CEO & Founder</p>
+                    <p class="small mb-3">He leads the organization's vision, strategy, and overall growth.</p>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-lg-4 col-md-6" style="color: #6c757d;">
+                <div class="team-member text-center p-4">
+                    <img src="images/arjun.jpg" alt="Team Member 2" class="mb-4 shadow">
+                    <h5 class="mb-1">Arjun Bhandari</h5>
+                    <p class="text-muted mb-3">Co-ordinator</p>
+                    <p class="small mb-3">He coordinates activities, manages communication, and ensures smooth project execution.</p>
+                    <div class="social-links">
+                         <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-lg-4 col-md-6" style="color: #6c757d;">
+                <div class="team-member text-center p-4">
+                    <img src="images/Bir bdr.jpg" alt="Team Member 3" class="mb-4 shadow">
+                    <h5 class="mb-1">Bir Bahadur Giri</h5>
+                    <p class="text-muted mb-3">Documentation Officer</p>
+                    <p class="small mb-3">He provides technical assistance, resolves system issues, and ensures smooth operation of technology services.</p>
+                    <div class="social-links">
+                        <a href="#"> <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="col-lg-4 col-md-6" style="color: #6c757d;">
+                <div class="team-member text-center p-4">
+                    <img src="images/bfpslogo.jpg" alt="Team Member 4" class="mb-4 shadow">
+                    <h5 class="mb-1">Deva K.C</h5>
+                    <p class="text-muted mb-3">Accountant</p>
+                    <p class="small mb-3">She manages financial records, handles accounts, and ensures accurate financial reporting.</p>
+                    <div class="social-links">
+                         <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Team Member 4 -->
+            <div class="col-lg-4 col-md-6" style="color: #6c757d;">
+                <div class="team-member text-center p-4">
+                    <img src="images/bfpslogo.jpg" alt="Team Member 4" class="mb-4 shadow">
+                    <h5 class="mb-1">Deva K.C</h5>
+                    <p class="text-muted mb-3">Technician</p>
+                    <p class="small mb-3">She manages financial records, handles accounts, and ensures accurate financial reporting.</p>
+                    <div class="social-links">
+                         <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- footer -->
+
+<footer class="footer-orange text-white pt-5">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Quick Response -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Quick Response</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="about_us.html" class="text-white fw-bold text-decoration-none">About us</a>
+          </li>
+          <li>
+            <a href="#services" class="text-white fw-bold text-decoration-none">Services</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Dang Location -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Dang Office</h5>
+        <ul class="list-unstyled small">
+          <li>📍 Ghorahi-15, Dang, Nepal</li>
+          <li>📞 9810247132</li>
+          <li>✉️ brightfuturedang@gmail.com</li>
+        </ul>
+        <iframe
+          src="https://www.google.com/maps?q=Ghorahi,Dang,Nepal&output=embed"
+          width="100%"
+          height="150"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Kathmandu Location -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Kathmandu Office</h5>
+        <ul class="list-unstyled small">
+          <li>📍 Samakhushi 26 Kathmandu, Nepal</li>
+          <li class="call-item">
+            📞 <a href="tel:9840190597">9840190597</a>
+          </li>
+
+          <li>✉️ info@brightfuture.edu.np</li>
+        </ul>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.965902342085!2d85.31846382814275!3d27.73449708513968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84326b7f991cfcf1%3A0x36fb653f5f04880e!2sBright%20Future%20Education%20Samakhusi!5e1!3m2!1sen!2snp!4v1767947478858!5m2!1sen!2snp" width="100%" height="150" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Extra / Support -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="fw-bold mb-3">Support</h5>
+        <ul class="list-unstyled small">
+          <li>📞 Office Hours: 6 AM – 6 PM</li>
+          <li>📅 Sunday – Friday</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="my-4">
+
+    <!-- Bottom Footer -->
+    <div class="text-center small pb-3">
+      © <span id="year"></span> Bright Future Prabidhik Shikshalaya. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+
+
+ <!-- google translate -->
+  <!-- Hidden Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+ <script src="language.js"></script> 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</html>
