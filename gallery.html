@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery | Bright Future Education</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .gallery-title {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .gallery-desc {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #6c757d;
+    }
+
+    .gallery-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 14px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .gallery-card:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay span {
+      color: #fff;
+      font-weight: 600;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media (max-width: 576px) {
+      .gallery-overlay span {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+<script>
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
+  const s = document.createElement('script');
+  s.src = 'header.js';
+  document.body.appendChild(s);
+});
+</script>
+<div id="nav"></div>
+<script>
+fetch("nav.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("nav").innerHTML = data;
+});
+</script>
+<!-- <div class="container my-3 text-end">
+  <label for="languageSelector" class="visually-hidden">Language</label>
+  <select id="languageSelector" class="form-select form-select-sm d-inline-block" style="width:140px;">
+    <option value="en" selected>English</option>
+    <option value="ja">Japanese</option>
+    <option value="ne">Nepali</option>
+  </select>
+</div> -->
+
+
+
+<!-- Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,ne,ja',
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+
+function changeLanguage(lang) {
+  const interval = setInterval(() => {
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event('change'));
+      clearInterval(interval);
+    }
+  }, 100);
+}
+
+function setLanguage(lang) {
+  localStorage.setItem('siteLang', lang);
+  changeLanguage(lang);
+}
+
+window.addEventListener("load", () => {
+  const savedLang = localStorage.getItem("siteLang");
+  if (savedLang && savedLang !== "en") {
+    changeLanguage(savedLang);
+    const selector = document.getElementById('languageSelector');
+    if (selector) selector.value = savedLang;
+  }
+  const selector = document.getElementById('languageSelector');
+  if (selector) selector.addEventListener('change', function () {
+    setLanguage(this.value);
+  });
+});
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Gallery Section -->
+  <section class="py-5">
+    <div class="container">
+
+      <div class="text-center mb-5">
+        <h2 class="gallery-title">Our Gallery</h2>
+        <p class="gallery-desc">
+          Explore moments from Japanese language classes, visa counseling,
+          skill training programs, computer and IT sessions, seminars, and
+          student activities at Bright Future Education.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/japanese class observed.jpeg" alt="Japanese Language Class">
+            <div class="gallery-overlay">
+              <span>Japanese Language class observed by Founder</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/nurshing.jpeg" alt="Nursing Care">
+            <div class="gallery-overlay">
+              <span>Nursing Care</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/Resturant.jpeg" alt="Restaurant Industry">
+            <div class="gallery-overlay">
+              <span>Restaurant Industry</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/construction.jpeg" alt="Construction Field">
+            <div class="gallery-overlay">
+              <span>Construction Field</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/transportation.jpg" alt="Automobile Transport Business Field">
+            <div class="gallery-overlay">
+              <span>Automobile Transport Business Field</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/building cleaning.jpeg" alt="Building Cleaning">
+            <div class="gallery-overlay">
+              <span>Building Cleaning</span>
+            </div>
+          </div>
+        </div>
+            <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/agriculture.jpeg" alt="Agriculture Field">
+            <div class="gallery-overlay">
+              <span>Agriculture Field</span>
+            </div>
+          </div>
+        </div>
+            <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/agriculture.jpeg" alt="Agriculture Field">
+            <div class="gallery-overlay">
+              <span>Agriculture Field</span>
+            </div>
+          </div>
+        </div>
+            <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/acomodation.jpeg" alt="Accommodation Field">
+            <div class="gallery-overlay">
+              <span>Accommodation Field</span>
+            </div>
+          </div>
+        </div>
+             <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/slide2.jpeg" alt="Japanese Language Class">
+            <div class="gallery-overlay">
+              <span>Japanese Language Class</span>
+            </div>
+          </div>
+        </div>
+
+             <div class="col-12 col-md-4">
+          <div class="gallery-card">
+            <img src="images/slide3.jpeg" alt="Japanese Language Class">
+            <div class="gallery-overlay">
+              <span>Japanese Language Class</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+<div id="footer"></div>
+<script>
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
+});
+</script>
+</html>

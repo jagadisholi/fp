@@ -120,6 +120,10 @@ fetch("header.html")
 .then(response => response.text())
 .then(data => {
     document.getElementById("header").innerHTML = data;
+  // load header script to initialize dynamic parts (date/time)
+  const s = document.createElement('script');
+  s.src = 'header.js';
+  document.body.appendChild(s);
 });
 </script>
 
@@ -140,7 +144,7 @@ fetch("header.html")
         <li class="nav-item"><a class="nav-link text-white" aria-current="page" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="about_us.html" target="">About</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="#services" target="_blank">Services</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
         <li class="nav-item d-flex align-items-center ms-3">
           <select id="languageSelector" class="form-select form-select-sm bg-light text-dark" onchange="setLanguage(this.value)">
@@ -188,17 +192,17 @@ fetch("header.html")
   <div id="carouselExampleControls" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 600px;">
     <div class="carousel-inner rounded-4 shadow-sm">
       <div class="carousel-item active">
-        <img src="images/slide 1.heic" class="d-block w-100" alt="First slide" style="object-fit: cover; height: 400px;">
+        <img src="images/slide1.jpeg" class="d-block w-100" alt="First slide" style="object-fit: cover; height: 400px;">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="images/slide 2.heic" class="d-block w-100" alt="Second slide" style="object-fit: cover; height: 400px;">
+        <img src="images/slide2.jpeg" class="d-block w-100" alt="Second slide" style="object-fit: cover; height: 400px;">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
         </div>
       </div>
       <div class="carousel-item">
-        <img src="images/slide 3.heic" class="d-block w-100" alt="Third slide" style="object-fit: cover; height: 400px;">
+        <img src="images/slide3.jpeg" class="d-block w-100" alt="Third slide" style="object-fit: cover; height: 400px;">
         <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
         </div>
       </div>
@@ -386,17 +390,16 @@ fetch("header.html")
         <!-- Team Members -->
         <div class="row g-4">
             <!-- Team Member 1 -->
-             <!-- Team Member 1 -->
             <div class="col-lg-4 col-md-6" style="color: #6c757d;">
                 <div class="team-member text-center p-4">
-                    <img src="images/bfpslogo.jpg" alt="Team Member 4" class="mb-4 shadow">
+                    <img src="images/paras.jpg" alt="Team Member 4" class="mb-4 shadow">
                     <h5 class="mb-1">Er. Paras Bhandari</h5>
-                    <p class="text-muted mb-3">Samrakshak</p>
-                    <p class="small mb-3">She manages financial records, handles accounts, and ensures accurate financial reporting.</p>
+                    <p class="text-muted mb-3">Advisor</p>
+                    <p class="small mb-3">He oversees organizational protection, safeguards institutional interests, and ensures compliance with policies and regulations.</p>
                     <div class="social-links">
                          <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/brightfutureeducation1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -409,8 +412,8 @@ fetch("header.html")
                     <p class="small mb-3">He leads the organization's vision, strategy, and overall growth.</p>
                     <div class="social-links">
                         <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/brightfutureeducation1"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </div>
@@ -424,8 +427,8 @@ fetch("header.html")
                     <p class="small mb-3">He coordinates activities, manages communication, and ensures smooth project execution.</p>
                     <div class="social-links">
                          <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/brightfutureeducation1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
@@ -433,14 +436,14 @@ fetch("header.html")
             <!-- Team Member 3 -->
             <div class="col-lg-4 col-md-6" style="color: #6c757d;">
                 <div class="team-member text-center p-4">
-                    <img src="images/Bir bdr.jpg" alt="Team Member 3" class="mb-4 shadow">
+                    <img src="images/bir.jpeg" alt="Team Member 3" class="mb-4 shadow">
                     <h5 class="mb-1">Bir Bahadur Giri</h5>
-                    <p class="text-muted mb-3">Documentation Officer</p>
-                    <p class="small mb-3">He provides technical assistance, resolves system issues, and ensures smooth operation of technology services.</p>
+                    <p class="text-muted mb-3">Counseling Officer</p>
+                    <p class="small mb-3">He provides guidance and counseling support to students, helps them overcome challenges, and fosters personal development.</p>
                     <div class="social-links">
-                        <a href="#"> <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-dribbble"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/brightfutureeducation1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/brightfutureeducation1"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -448,28 +451,28 @@ fetch("header.html")
             <!-- Team Member 4 -->
             <div class="col-lg-4 col-md-6" style="color: #6c757d;">
                 <div class="team-member text-center p-4">
-                    <img src="images/bfpslogo.jpg" alt="Team Member 4" class="mb-4 shadow">
-                    <h5 class="mb-1">Deva K.C</h5>
-                    <p class="text-muted mb-3">Accountant</p>
-                    <p class="small mb-3">She manages financial records, handles accounts, and ensures accurate financial reporting.</p>
+                    <img src="images/deva miss.jpg" alt="Team Member 4" class="mb-4 shadow">
+                    <h5 class="mb-1">Deba K.C</h5>
+                    <p class="text-muted mb-3">Documentation Officer</p>
+                    <p class="small mb-3">She manages documentation, maintains records, and ensures proper organization of all educational materials.</p>
                     <div class="social-links">
                          <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/brightfutureeducation1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/brightfutureeducation1"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
             <!-- Team Member 4 -->
             <div class="col-lg-4 col-md-6" style="color: #6c757d;">
                 <div class="team-member text-center p-4">
-                    <img src="images/bfpslogo.jpg" alt="Team Member 4" class="mb-4 shadow">
-                    <h5 class="mb-1">Deva K.C</h5>
-                    <p class="text-muted mb-3">Technician</p>
-                    <p class="small mb-3">She manages financial records, handles accounts, and ensures accurate financial reporting.</p>
+                    <img src="images/pratik pokhrel.jpg" alt="Team Member 4" class="mb-4 shadow">
+                    <h5 class="mb-1">Pratik Pokhrel</h5>
+                    <p class="text-muted mb-3">Documentation Officer</p>
+                    <p class="small mb-3">He manages documentation, maintains records, and ensures proper organization of all educational materials.</p>
                     <div class="social-links">
                          <a href="https://www.tiktok.com/@brightfuturedangktm?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/brightfutureeducation1"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/brightfutureeducation1"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -478,12 +481,12 @@ fetch("header.html")
 </section>
 <!-- footer -->
 
-<footer class="footer-orange text-white pt-5">
+<!-- <footer class="footer-orange text-white pt-5">
   <div class="container">
     <div class="row gy-4">
 
-      <!-- Quick Response -->
-      <div class="col-lg-3 col-md-6">
+      <! -- Quick Response -->
+      <!-- <div class="col-lg-3 col-md-6">
         <h5 class="fw-bold mb-3">Quick Response</h5>
         <ul class="list-unstyled">
           <li>
@@ -496,7 +499,7 @@ fetch("header.html")
       </div>
 
       <!-- Dang Location -->
-      <div class="col-lg-3 col-md-6">
+      <!-- <div class="col-lg-3 col-md-6">
         <h5 class="fw-bold mb-3">Dang Office</h5>
         <ul class="list-unstyled small">
           <li>📍 Ghorahi-15, Dang, Nepal</li>
@@ -514,7 +517,7 @@ fetch("header.html")
       </div>
 
       <!-- Kathmandu Location -->
-      <div class="col-lg-3 col-md-6">
+      <!-- <div class="col-lg-3 col-md-6">
         <h5 class="fw-bold mb-3">Kathmandu Office</h5>
         <ul class="list-unstyled small">
           <li>📍 Samakhushi 26 Kathmandu, Nepal</li>
@@ -528,7 +531,7 @@ fetch("header.html")
       </div>
 
       <!-- Extra / Support -->
-      <div class="col-lg-3 col-md-6">
+      <!-- <div class="col-lg-3 col-md-6">
         <h5 class="fw-bold mb-3">Support</h5>
         <ul class="list-unstyled small">
           <li>📞 Office Hours: 6 AM – 6 PM</li>
@@ -540,8 +543,8 @@ fetch("header.html")
 
     <hr class="my-4">
 
-    <!-- Bottom Footer -->
-    <div class="text-center small pb-3">
+    <! -- Bottom Footer -->
+    <!-- <div class="text-center small pb-3">
       © <span id="year"></span> Bright Future Prabidhik Shikshalaya. All Rights Reserved.
     </div>
   </div>
@@ -549,8 +552,16 @@ fetch("header.html")
 
 <script>
   document.getElementById("year").innerHTML = new Date().getFullYear();
-</script>
+</script> -->
 
+<div id="footer"></div>
+<script>
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
+});
+</script>
 
  <!-- google translate -->
   <!-- Hidden Google Translate -->

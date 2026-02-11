@@ -24,6 +24,27 @@
   </style>
 </head>
 
+<div id="header"></div>
+
+<script>
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
+  const s = document.createElement('script');
+  s.src = 'header.js';
+  document.body.appendChild(s);
+});
+</script>
+<div id="nav"></div>
+<script>
+fetch("nav.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("nav").innerHTML = data;
+});
+</script>
+
 <body>
   <div class="container my-5">
     <h1 class="text-center text-warning mb-5">CTEVT Courses</h1>
@@ -36,8 +57,9 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Computer Hardware Technician</h5>
             <p class="card-text">
-              Learn computer assembly, troubleshooting, maintenance, and basic
-              networking skills required for professional hardware technicians.
+              Practical technician training: PC assembly, diagnostics, component
+              replacement, hardware troubleshooting, OS installation and basic
+              local networking for field and workshop roles.
             </p>
           <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -56,8 +78,9 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Assistant Plumber (390 Hr)</h5>
             <p class="card-text">
-              Gain practical skills in plumbing installation, pipe fitting,
-              maintenance, and safety standards for residential and commercial work.
+              390-hour hands-on program covering pipe installation, jointing,
+              fixture fitting, drainage systems, leak repair and workplace safety
+              for residential and commercial plumbing.
             </p>
 
           <a href="https://wa.me/9779810247132" 
@@ -76,8 +99,9 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Junior Building Electrician (390 Hr)</h5>
             <p class="card-text">
-              Learn electrical wiring, installation, repair, and safety practices
-              for buildings following national electrical standards.
+              390-hour vocational course in building electrics: wiring, circuit
+              installation, conduit work, switchgear basics and safe working
+              practices aligned with national standards.
             </p>
           <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -95,8 +119,9 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Nursing Care Giver</h5>
             <p class="card-text">
-              Training in basic healthcare, patient care, elderly support, hygiene,
-              and assistance in hospitals and home-care environments.
+              Foundational caregiving skills: patient hygiene, mobility assistance,
+              vital sign monitoring, medication support basics and elderly care
+              for home and clinical settings.
             </p>
           <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -129,5 +154,14 @@ function openWhatsApp() {
 <div id="google_translate_element" style="display:none;"></div>
 <script src="language.js"></script> 
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<div id="footer"></div>
+<script>
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
+});
+</script>
 </body>
 </html>

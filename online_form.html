@@ -24,6 +24,27 @@
   </style>
 </head>
 
+<div id="header"></div>
+
+<script>
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
+  const s = document.createElement('script');
+  s.src = 'header.js';
+  document.body.appendChild(s);
+});
+</script>
+<div id="nav"></div>
+<script>
+fetch("nav.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("nav").innerHTML = data;
+});
+</script>
+
 <body>
   <div class="container my-5">
     <h1 class="text-center text-warning mb-5">Online Form</h1>
@@ -36,8 +57,8 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Loksewa Aayog & Teacher Service Commission</h5>
             <p class="card-text">
-              Complete assistance for online application, form filling, correction,
-              and submission for Loksewa and TSC exams.
+              Form filling assistance for civil service and teacher exams:
+              application submission, document verification and exam guidance.
             </p>
             <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -54,8 +75,8 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">E-Passport Online Form</h5>
             <p class="card-text">
-              Help with online passport application, appointment booking,
-              document preparation, and submission process.
+              E-passport application guidance: form filling, document requirements,
+              appointment scheduling and status tracking.
             </p>
             <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -72,8 +93,8 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Police Report Online Form</h5>
             <p class="card-text">
-              Support for police clearance certificate online form,
-              document upload, payment, and tracking.
+              Police clearance certificate assistance: form completion, document
+              submission, payment processing and certificate delivery tracking.
             </p>
             <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -90,8 +111,8 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">National ID Card Online Form</h5>
             <p class="card-text">
-              Assistance for National ID registration, online form filling,
-              appointment scheduling, and verification.
+              National ID registration and renewal: form completion, document
+              verification, appointment booking and delivery assistance.
             </p>
                 <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -108,8 +129,8 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Bank & Financial Sector Online Form</h5>
             <p class="card-text">
-              Help with online job applications for banks and financial institutions,
-              including vacancy forms and submissions.
+              Banking and finance job applications: form preparation, resume
+              optimization and interview readiness assistance.
             </p>
                 <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -126,8 +147,8 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Driving License, PAN Online Form</h5>
             <p class="card-text">
-              Support for driving license, PAN registration,
-              online form filling, and appointment booking.
+              Driving license and PAN application: form completion, document
+              requirements, appointment scheduling and registration support.
             </p>
               <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -145,8 +166,8 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">CTEVT, NEB & Other Institutions</h5>
             <p class="card-text">
-              Online application support for CTEVT, NEB,
-              entrance forms, registration, and exam-related services.
+              Technical and educational institution forms: course registration,
+              entrance exam applications and result/certificate submissions.
             </p>
               <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -163,8 +184,8 @@
           <div class="card-body text-center">
             <h5 class="card-title text-primary">TU Exam, Entrance & Other Forms</h5>
             <p class="card-text">
-              Assistance for Tribhuvan University (BSc, BBA, BIT, MA, MBS)
-              exam, entrance, and other online forms.
+              Tribhuvan University support: form filling for undergraduate and
+              postgraduate programs, exam registration and document submission.
             </p>
             <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -190,6 +211,23 @@ function openWhatsApp() {
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+
+     <!-- google translate -->
+  <!-- Hidden Google Translate -->
+<div id="google_translate_element" style="display:none;"></div>
+<script src="language.js"></script> 
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<div id="footer"></div>
+<script>
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
+});
+</script>
+</body>
+</html>
 
      <!-- google translate -->
   <!-- Hidden Google Translate -->

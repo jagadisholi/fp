@@ -33,6 +33,17 @@ fetch("header.html")
 .then(response => response.text())
 .then(data => {
     document.getElementById("header").innerHTML = data;
+  const s = document.createElement('script');
+  s.src = 'header.js';
+  document.body.appendChild(s);
+});
+</script>
+<div id="nav"></div>
+<script>
+fetch("nav.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("nav").innerHTML = data;
 });
 </script>
 
@@ -47,8 +58,8 @@ fetch("header.html")
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Basic Course</h5>
             <p class="card-text">
-              Learn computer fundamentals including MS Word, Excel, PowerPoint,
-              internet usage, email, and basic operating system skills.
+              Fundamentals of computers: MS Word, Excel, PowerPoint, internet
+              use, email, file management, and basic operating system skills.
             </p>
             <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -65,8 +76,8 @@ fetch("header.html")
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Diploma & Designing Package</h5>
             <p class="card-text">
-              Professional training in graphic design, Photoshop, Illustrator,
-              InDesign, video editing, and creative design tools.
+              Diploma-level design training covering Adobe Photoshop, Illustrator,
+              InDesign and basic video editing with hands-on portfolio projects.
             </p>
             <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -83,8 +94,8 @@ fetch("header.html")
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Accounting Package</h5>
             <p class="card-text">
-              Learn Tally, accounting principles, billing systems, taxation basics,
-              and financial record management for businesses.
+              Practical accounting: Tally and bookkeeping, invoicing, payroll,
+              tax basics and financial record keeping for small businesses.
             </p>
               <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -101,8 +112,9 @@ fetch("header.html")
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Engineering AutoCAD</h5>
             <p class="card-text">
-              Master AutoCAD for civil, electrical, and mechanical drawings,
-              layouts, plans, and professional engineering designs.
+              AutoCAD training for 2D/3D drafting, dimensioning, layering and
+              producing professional engineering drawings for civil, electrical,
+              and mechanical projects.
             </p>
               <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -119,8 +131,8 @@ fetch("header.html")
           <div class="card-body text-center">
             <h5 class="card-title text-primary">Computer Hardware & Repairing Classes</h5>
             <p class="card-text">
-              Hands-on training in computer assembly, troubleshooting,
-              maintenance, upgrading, and basic networking repair skills.
+              Hands-on hardware and repair: assembly, diagnostics, component
+              replacement, OS installation, BIOS setup and basic networking.
             </p>
             <a href="https://wa.me/9779810247132" 
             target="_blank" 
@@ -153,5 +165,14 @@ function openWhatsApp() {
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script src="assets/scroll.js"></script>
+
+<div id="footer"></div>
+<script>
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
+});
+</script>
 </body>
 </html>

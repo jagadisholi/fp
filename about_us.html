@@ -19,11 +19,38 @@
         }
     </style>
 </head>
+    <div id="header"></div>
+
+<script>
+fetch("header.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("header").innerHTML = data;
+    const s = document.createElement('script');
+    s.src = 'header.js';
+    document.body.appendChild(s);
+});
+</script>
+<div id="nav"></div>
+<script>
+fetch("nav.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("nav").innerHTML = data;
+});
+</script>
 <body style="color: #6c757d;">
     <section class="about-hero">
         <div class="container">
             <h1 class="fw-bold text-warning">About Us</h1>
-            <p class="mt-3">Bright Future Prabidhik Shikshalaya (BFPS) is a modern educational institution in the Mid-West region of Lumbini Provience. This Institute is located in Dang District Ghorahi Sub-Metropolitan City 15 Bharatpur, Nepal. It was established in the year 2021 A.D to conduct technical, practical and short term training dedicated to meet the growing need for quality practical education. BFPS sprouted in the educational field with the support of academically conscious parents and the efforts of social service oriented people with the aim of providing quality technical and practical education wiht excellence and strict discipline has been established  to provide with a team of committed and experienced trainer and dedicated teaching and non-teaching staff, the academy aims to make the institution a center of excellence by providing high quality academic services along with related academic activities.</p>
+            <p class="mt-3">Bright Future Education is a CTEVT-recognized educational institution and Japan-focused consultancy, established in 2021 A.D. Located in Ghorahi 15, Dang, Lumbini Province, Nepal and Samakhusi–26, Kathmandu, Nepal. 
+In addition, we conduct CTEVT-recognized Japanese Language classes, computer, technical, and short-term vocational training programs to enhance employability and professional skills. <hr>
+
+We specialize in Japanese language education, skill-based training, and human resource development for Japan. Our programs include JLPT N5, N4, and N3, JFT-Basic, and Irodori A1/A2, along with workplace-oriented training that prepares students for Japanese life, culture, discipline, Japanese Language and Skill program related topic counseling. Our teaching approach is practical, result-focused, and affordable.
+
+Bright Future Education provides one-stop Japan consultancy services, including support for Student Visa, Specified Skilled Worker Visa Type 1, Gijinkoku Visa, and Training (New System / TITP) for Language Classes. Our services cover counseling, education, documentation, interview preparation; visa Support counseling, entry into Japan.
+
+With an experienced and active team working in close coordination with Japanese supervising organizations, registered support organizations, and host companies, Bright Future Education operates with full legal compliance, transparency, and ethical standards. We are committed to building a safe, stable, and successful future for our students through quality education, honest consultancy, and sustainable international partnerships.</p>
         </div>
     </section>
 <!-- Google Translate -->
@@ -68,7 +95,7 @@ window.addEventListener("load", () => {
             <div class="row align-items-center">
                 <div class="col-md-6 mb-4">
                     <h3 class="fw-bold text-warning">Who We Are</h3>
-                    <p>We are a dedicated organization focused on providing reliable, efficient, and customer-friendly solutions. Our team believes in innovation, transparency,and continuous improvement.</p>
+                    <p>We are a professional education and consultancy organization committed to providing high-quality Japanese language education, reliable visa guidance, and skill-based training services. At Bright Future Education, we focus on helping students and professionals achieve their academic and career goals through clear guidance, practical learning, and personalized support. Our team believes in transparency, ethical practices, and continuous improvement, ensuring every student receives honest counseling, effective training, and dependable service. With a student-centered approach and a strong focus on Japan-related opportunities, we strive to create meaningful pathways for a successful and global future.</p>
                 </div>
                 <div class="col-md-6 text-center">
                     <img src="images/slide1.jpg" alt="About Image" class="img-fluid rounded">
@@ -84,7 +111,7 @@ window.addEventListener("load", () => {
                     <div class="card h-100 about_box shadow-sm">
                         <div class="card-body">
                             <h4 class="fw-bold text-warning">Our Mission</h4>
-                            <p style="color: #6c757d;">To deliver high-quality services that create value and build trust with our clients and community.</p>
+                            <p style="color: #6c757d;">Our mission is to provide high-quality Japanese language education, professional consultancy, and skill-based training services that empower students to achieve international education and career opportunities, especially in Japan. We are committed to delivering honest guidance, practical learning, affordable services, and personalized support that create real value and build long-term trust with our students, clients, and the community.</p>
                         </div>
                     </div>
                 </div>
@@ -92,7 +119,7 @@ window.addEventListener("load", () => {
                     <div class="card h-100 about_box shadow-sm">
                         <div class="card-body">
                             <h4 class="fw-bold text-warning">Our Vision</h4>
-                            <p style="color: #6c757d;">To become a leading organizaton known for innovation, reliability,and social responsibility.</p>
+                            <p style="color: #6c757d;">Our vision is to become a leading educational institute and consultancy recognized for excellence in Japanese language education, reliable visa support services, innovation in training methods, and strong social responsibility. We aim to shape skilled, confident, and globally competitive individuals by maintaining high standards of education, transparency, and continuous improvement.</p>
                         </div>
                     </div>
                 </div>
@@ -104,24 +131,38 @@ window.addEventListener("load", () => {
 
     <ul class=" text-lg-start" style="max-width: 800px;">
         <li class="text-secondary mb-2">
-            To focus on career along with studies, teach and guide students in the right way to succeed in life.
+           To focus on career development along with academic studies by guiding students in the right direction for lifelong success.        </li>
+        <li class="text-secondary mb-2">
+            To provide complete study planning and career guidance skills to help students build a strong and clear career path.
         </li>
         <li class="text-secondary mb-2">
-            To provide complete study planning skills to the students to develop their career.
+          To offer high-quality Japanese language education, skill-based training, and professional consultancy for international opportunities, especially in Japan.
         </li>
         <li class="text-secondary mb-2">
-            Providing consultancy and other services related to computer engineering works.
-        </li>
-        <li class="text-secondary mb-2">
-            Conducting public service, teacher service and various specialized classes.
+          To provide consultancy and support services related to computer engineering, information technology, and digital skills development.
         </li>
         <li class="text-secondary">
-            Computer and IT doing related activities.
+          To conduct public service programs, teacher training, and various specialized classes that contribute to educational and social development.
+        </li>
+        <li class="text-secondary">
+            To maintain transparency, integrity, and student-centered approaches in all our services, ensuring trust and satisfaction among students and clients.
+        </li>
+        <li class="text-secondary">
+            To continuously improve our educational methods, consultancy services, and training programs to meet evolving market demands and student needs.
         </li>
     </ul>
 </div>
 
-</body>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
+<div id="footer"></div>
+<script>
+fetch("footer.html")
+.then(response => response.text())
+.then(data => {
+    document.getElementById("footer").innerHTML = data;
+});
+</script>
+</body>
 </html>
